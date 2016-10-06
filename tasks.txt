@@ -1,4 +1,4 @@
-c|Rachel|Mop Floor
-i|Rachel|Put dishes away
-i|Rachel|Clean litter box
-c|Rachel|Brush Tank
+c|Rachel|Mop Floor|0000000001
+i|Rachel|Put dishes away|0000000002
+i|Rachel|Clean litter box|0000000003
+c|Rachel|Brush Tank|0000000004

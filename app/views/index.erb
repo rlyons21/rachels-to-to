@@ -1,23 +1,29 @@
-<ul>
-	All
-	<% @tasks.each do |t| %>
+<div>
+	<a href="/new">Add a Task</a>
+</div>
 
-		<li><%= t %></li>
-	<% end %>
-</ul>
+<div>
+	<ul>
+		All
+		<% @tasks.each do |t| %>
 
-<ul>
-	Incomplete
-	<% @incomplete_tasks.each do |t| %>
+			<li><%= t %></li>
+		<% end %>
+	</ul>
 
-		<li><%= t %></li>
-	<% end %>
-</ul>
+	<ul>
+		Incomplete
+		<% @incomplete_tasks.each do |t| %>
 
-<ul>
-	Complete
-	<% @complete_tasks.each do |t| %>
+			<li><%= t %></li>
+		<% end %>
+	</ul>
 
-		<li><%= t %></li>
-	<% end %>
-</ul>
+	<ul>
+		Complete
+		<% @complete_tasks.each do |t| %>
+
+			<li><%= t %></li>
+		<% end %>
+	</ul>
+</div>
