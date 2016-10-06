@@ -29,4 +29,18 @@ class Tasks
 		return arr
 	end
 
+	def Tasks.complete(filename)
+		arr = Array.new()
+
+		f = File.open(filename, "r")
+		f.each_line do |line|
+			l = line.split("|")
+			if l[0] == "c"
+		    	arr.push(l[2])
+			end
+		end
+		f.close
+		return arr
+	end
+
 end
