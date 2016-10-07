@@ -1,1 +1,5 @@
-i|Rachel|make bed|6671661983i|Tyler|Brush Tank|8823825857
+i|Rachel|make bed|6671661983
+i|Tyler|Brush Tank|8823825857
+i|Tyler|Walk the hamster |6933044423
+i|Rachel|do dishes|3492287180
+i|Rachel|get the mail|6534255977

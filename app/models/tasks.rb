@@ -43,7 +43,7 @@ class Tasks
 
 
 	def Tasks.newTask(filename, person, newTask, num)
-		f = File.open(filename, "a")
+		f = File.open(filename, "a+")
 		f.puts("i|#{person}|#{newTask}|#{num}")
 		f.close
 	end
