@@ -5,8 +5,7 @@ class Tasks
 		
 		f = File.open(filename, "r")
 		f.each_line do |line|
-			l = line.split("|")
-		    arr.push(l[2])
+		    arr.push(line)
 		end
 		f.close
 		return arr
@@ -43,9 +42,9 @@ class Tasks
 	end
 
 
-	def Tasks.newTask(filename, person, task, num)
-		f = File.open(filename, "w")
-		f.write("i|#{person}|#{task}|#{num}")
+	def Tasks.newTask(filename, person, newTask, num)
+		f = File.open(filename, "a")
+		f.puts("i|#{person}|#{newTask}|#{num}")
 		f.close
 	end
 
