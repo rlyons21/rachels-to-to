@@ -12,8 +12,6 @@ class Tasks
 		return arr
 	end
 
-	#def Tasks.delete(filename)
-
 
 	def Tasks.incomplete(filename)
 		arr = Array.new()
@@ -29,6 +27,7 @@ class Tasks
 		return arr
 	end
 
+
 	def Tasks.complete(filename)
 		arr = Array.new()
 
@@ -42,5 +41,14 @@ class Tasks
 		f.close
 		return arr
 	end
+
+
+	def Tasks.newTask(filename, person, task, num)
+		f = File.open(filename, "w")
+		f.write("i|#{person}|#{task}|#{num}")
+		f.close
+	end
+
+
 
 end
