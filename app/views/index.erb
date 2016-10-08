@@ -12,6 +12,13 @@
 			<input type="hidden" name="num" value="<%= t[3][0..8] %>">
 			<input type="submit" value="Delete">
 		</form>
+		<form action="/edit">
+			<input type="hidden" name="num" value="<%= t[3][0..8] %>">
+			<input type="hidden" name="person" value="<%= t[1] %>">
+			<input type="hidden" name="status" value="<%= t[0] %>">
+			<input type="hidden" name="task" value="<%= t[2] %>">
+			<input type="submit" value="Edit">
+		</form>
 		<% end %>
 	</ul>
 

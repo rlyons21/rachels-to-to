@@ -8,3 +8,7 @@ MyApp.get '/delete' do
 	Tasks.delete("tasks.txt", params[:num])
 	redirect '/'
 end
+
+MyApp.get '/edit' do
+	erb :"edit"
+end

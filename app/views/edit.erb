@@ -1,0 +1,6 @@
+<form action="/edit">
+	<input type="text" name="task" value=<%= params[:task] %>><br>
+	<input type="radio" name="person" value="Rachel" <%= "checked" if params[:person] == "Rachel" %>>Rachel<br>
+	<input type="radio" name="person" value="Tyler" <%= "checked" if params[:person] == "Tyler" %>>Tyler<br>
+	<input type="submit">
+</form>
