@@ -19,7 +19,7 @@ class Tasks
 		f.each_line do |line|
 			l = line.split("|")
 			if l[0] == "i"
-		    	arr.push(l[2])
+		    	arr.push(l)
 			end
 		end
 		f.close
@@ -34,7 +34,7 @@ class Tasks
 		f.each_line do |line|
 			l = line.split("|")
 			if l[0] == "c"
-		    	arr.push(l[2])
+		    	arr.push(l)
 			end
 		end
 		f.close
@@ -47,6 +47,33 @@ class Tasks
 		f.puts("i|#{person}|#{newTask}|#{num}")
 		f.close
 	end
+
+
+	def Tasks.findTask(filename, num, allTasks)
+		line = allTasks.index{|element| element.include?(num)}
+		return line
+	end
+
+
+	def Tasks.delete(filename, num)
+		allTasks = Tasks.getAll(filename)
+		index = Tasks.findTask(filename, num, allTasks)
+		allTasks.delete_at(index)
+		
+		File.delete(filename)
+		
+		f = File.open("tasks.txt", "a")
+		allTasks.each do |task|
+			f.puts(task)
+		end
+	end
+
+
+
+
+
+
+
 
 
 
