@@ -1,9 +1,5 @@
 <div>
 	<a href="/new">Add a Task</a>
-	<% if @index
-		puts @index 
-		end %>
-
 </div>
 
 <div>
@@ -13,7 +9,7 @@
 
 			<li><%= t[2] %></li>
 		<form action="/delete">
-			<input type="hidden" name="num" value="<%= t[3] %>">
+			<input type="hidden" name="idNum" value="<%= t[3] %>">
 			<input type="submit" value="Delete">
 		</form>
 		<% end %>

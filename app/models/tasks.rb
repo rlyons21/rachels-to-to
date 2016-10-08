@@ -50,22 +50,23 @@ class Tasks
 
 
 	def Tasks.findTask(filename, num, allTasks)
-		line = allTasks.index{|element| element.include?(num)}
-		return line
+		l = allTasks.index{|s| s.include?(num)}
+		return l
 	end
 
 
 	def Tasks.delete(filename, num)
 		allTasks = Tasks.getAll(filename)
-		index = Tasks.findTask(filename, num, allTasks)
-		allTasks.delete_at(index)
+		line = Tasks.findTask(filename, num, allTasks)
+		allTasks.delete_at(line)
 		
 		File.delete(filename)
 		
-		f = File.open("tasks.txt", "a")
-		allTasks.each do |task|
-			f.puts(task)
-		end
+		File.open(filename, "a") { |f|
+			allTasks.each do |task|
+				f.puts(task)
+			end
+		}
 	end
 
 
