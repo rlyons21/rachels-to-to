@@ -24,17 +24,15 @@ class Tasks
 	#
 	# returns an array made up from the lines of the txt file "filename" of the tasks tha are incomplete
 
-	def Tasks.incomplete(filename)
+	def Tasks.incomplete(tasks)
 		arr = Array.new()
 
-		f = File.open(filename, "r")
-		f.each_line do |line|
-			l = line.split("|")
-			if l[0] == "i"
-		    	arr.push(l)
+		tasks.each do |task|
+			t = task.split("|")
+			if t[0] == "i"
+		    	arr.push(t)
 			end
 		end
-		f.close
 		return arr
 	end
 
@@ -45,17 +43,15 @@ class Tasks
 	#
 	# returns an array made up from the lines of the txt file "filename" of the tasks tha are complete
 
-	def Tasks.complete(filename)
+	def Tasks.complete(tasks)
 		arr = Array.new()
 
-		f = File.open(filename, "r")
-		f.each_line do |line|
-			l = line.split("|")
-			if l[0] == "c"
-		    	arr.push(l)
+		tasks.each do |task|
+			t = task.split("|")
+			if t[0] == "c"
+		    	arr.push(t)
 			end
 		end
-		f.close
 		return arr
 	end
 
