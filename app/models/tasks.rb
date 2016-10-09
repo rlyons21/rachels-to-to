@@ -141,8 +141,9 @@ class Tasks
 		f.each_line do |line|
 			l = line.split("|")
 			if l[1] == person
-				arr.push(l)
+				arr.push(line)
 			end
 		end
+		return arr
 	end
 end
