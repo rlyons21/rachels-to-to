@@ -121,6 +121,7 @@ class Tasks
 	# status is a string. Either "i" for incomplete, or "c" for complete
 	#
 	# returns nil
+
 	def Tasks.edit(filename, num, task, person, status)
 		allTasks = Tasks.getAll(filename)
 		line = Tasks.findTask(filename, num, allTasks)
@@ -137,6 +138,15 @@ class Tasks
 
 
 
+	def Tasks.filterByName(filename, person)
+		arr = Array.new()
 
-
+		f = File.open(filename, "r")
+		f.each_line do |line|
+			l = line.split("|")
+			if l[1] == person
+				arr.push(l)
+			end
+		end
+	end
 end
