@@ -12,3 +12,8 @@ end
 MyApp.get '/edit' do
 	erb :"edit"
 end
+
+MyApp.get '/editTask' do 
+	Tasks.edit("tasks.txt", params[:num], params[:task], params[:person], params[:status])
+	redirect '/'
+end

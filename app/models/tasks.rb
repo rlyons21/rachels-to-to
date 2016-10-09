@@ -70,9 +70,19 @@ class Tasks
 	end
 
 
+	def Tasks.edit(filename, num, task, person, status)
+		allTasks = Tasks.getAll(filename)
+		line = Tasks.findTask(filename, num, allTasks)
+		allTasks[line] = "#{status}|#{person}|#{task}|#{num}"
 
-
-
+		File.delete(filename)
+		
+		File.open(filename, "a") { |f|
+			allTasks.each do |task|
+				f.puts(task)
+			end
+		}
+	end
 
 
 
