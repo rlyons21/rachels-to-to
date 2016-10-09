@@ -2,5 +2,7 @@
 	<input type="text" name="task" value=<%= params[:task] %>><br>
 	<input type="radio" name="person" value="Rachel" <%= "checked" if params[:person] == "Rachel" %>>Rachel<br>
 	<input type="radio" name="person" value="Tyler" <%= "checked" if params[:person] == "Tyler" %>>Tyler<br>
+	<input type="radio" name="status" value="i" <%= "checked" if params[:status] == "i" %>>Incomplete<br>
+	<input type="radio" name="status" value="c" <%= "checked" if params[:status] == "c" %>>Complete<br>
 	<input type="submit">
 </form>
