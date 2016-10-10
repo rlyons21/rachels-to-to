@@ -20,7 +20,7 @@ class Tasks
 	
 	# Creates an array of incomplete tasks and their information
 	#
-	# filename is the name of the file that contains the information about each task
+	# tasks is an array of tasks from tasks.txt. Element Ex.: "i|Rachel|feed tank|9581471417"
 	#
 	# returns an array made up from the lines of the txt file "filename" of the tasks tha are incomplete
 
@@ -39,7 +39,7 @@ class Tasks
 
 	# Creates an array of complete tasks and their information
 	#
-	# filename is the name of the file that contains the information about each task
+	# tasks is an array of tasks from tasks.txt. Element Ex.: "i|Rachel|feed tank|9581471417"
 	#
 	# returns an array made up from the lines of the txt file "filename" of the tasks tha are complete
 
@@ -133,6 +133,12 @@ class Tasks
 	end
 
 
+	# Filters through and finds all of the tasks assigned to a given person
+	#
+	# filename is the name of the file that contains the information about each task
+	# person is a string containing the name of the person whose tasks you want
+	#
+	# returns an array of tasks assigned to person. Element ex: "i|Rachel|feed tank|9581471417"
 
 	def Tasks.filterByName(filename, person)
 		arr = Array.new()
